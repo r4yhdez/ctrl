@@ -1,0 +1,117 @@
+<html>
+ <head>
+  <title>
+   Aditya Library
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            transition: background-color 0.3s ease;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 90%;
+            max-width: 1200px;
+            text-align: center;
+        }
+        .logo-section {
+            margin-bottom: 30px;
+        }
+        .logo-section img {
+            width: 150px;
+            height: auto;
+        }
+        .logo-section h1 {
+            font-size: 32px;
+            font-weight: bold;
+            margin-top: 20px;
+            color: #333;
+        }
+        .login-section {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .login-section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+        }
+        .login-section input {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .login-section button {
+            width: 100%;
+            padding: 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .login-section button:hover {
+            background-color: #0056b3;
+        }
+        @media (min-width: 768px) {
+            .container {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            .logo-section {
+                text-align: left;
+                margin-bottom: 0;
+            }
+            .login-section {
+                text-align: left;
+            }
+        }
+        .dimmed {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="logo-section">
+    <img alt="Library logo" height="150" src="https://storage.googleapis.com/a1aa/image/3G7ThJc9kV4ANNAAHjk4bq74bIa6OvjgcRA5f3pVa8G1WDAKA.jpg" width="150"/>
+    <h1>
+     Aditya library
+    </h1>
+   </div>
+   <div class="login-section">
+    <input onblur="restoreBackground()" onfocus="dimBackground()" placeholder="Username" type="text"/>
+    <input onblur="restoreBackground()" onfocus="dimBackground()" placeholder="Password" type="password"/>
+    <button>
+     Login
+    </button>
+   </div>
+  </div>
+  <script>
+   function dimBackground() {
+            document.body.classList.add('dimmed');
+        }
+        function restoreBackground() {
+            document.body.classList.remove('dimmed');
+        }
+  </script>
+ </body>
+</html>
